@@ -31,15 +31,11 @@ namespace Lab3
 
             //Создать список (List<int>) чисел(тип данных int[]) для хранения сортированных данных
             var int_list = new List<int>();
-            for (int i = 0; i < length - 1; i++)
-            {
-                int_list.Insert(i, int_arr[i]);
-            }
 
             //Далее необходимо реализовать процедуру сортировки для этого необходимо
             //использовать 2 цикла: один цикл вложен в другой. Для вставки чисел в 
             //список использовать метод List<T>.Insert(…)
-            for (int i = 0; i < length -1; i++)
+            for (int i = 0; i < length - 1; i++)
             {
                 int temp = int_arr[i];
                 int j = i - 1;
@@ -50,10 +46,16 @@ namespace Lab3
                 }
                 int_arr[j + 1] = temp;
             }
-
+            //Вносим сортированные данные в список
             for (int i = 0; i < length - 1; i++)
             {
-                Console.WriteLine(int_arr[i]);
+                int_list.Insert(i, int_arr[i]);
+            }
+
+            //Результирующий список вывести на экран
+            for (int i = 0; i < length - 1; i++)
+            {
+                Console.WriteLine(int_list[i]);
             }
             Console.ReadLine();
         }
