@@ -34,20 +34,26 @@ namespace Lab4
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
-            //Далее необходимо реализовать процедуру сортировки в одном цикле 
-            //для этого необходимо использовать цикл: «while». 
+            //Далее необходимо реализовать процедуру сортировки в одном цикле
+            //для этого необходимо использовать цикл: «while».
             //Цикл прекращается (команда «break»), как только отсутствуют обмены при итерации.
-            int ii = 0, temp;
-            while (ii < length - 1)
+            int ii = 0, temp, x = 0 , y = 0;
+            while (x < int_arr.Length * int_arr.Length)
             {
                 if (int_arr[ii + 1] < int_arr[ii])
                 {
                     temp = int_arr[ii];
                     int_arr[ii] = int_arr[ii + 1];
                     int_arr[ii + 1] = temp;
-                    ii = 0;
+                    y++;
                 }
-                else ii++;
+                if (ii < int_arr.Length -2) ii++;
+                else
+                {
+                  ii = 0;
+                  if(ch == 0 ) break;
+                }
+                x++;
             }
 
             //Останавливаем секундомер
@@ -56,7 +62,7 @@ namespace Lab4
             //Результирующий список вывести на экран, указать время секундомера.
             Console.WriteLine("Время затраченное на сортировку: {0}", watch.ElapsedTicks);
 
-            for (int i = 0; i < length - 1; i++)
+            for (int i = 0; i < int_arr.Length; i++)
             {
                 Console.Write("{0} ", int_arr[i]);
             }
