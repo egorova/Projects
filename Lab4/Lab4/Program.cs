@@ -51,7 +51,7 @@ namespace Lab4
                 else
                 {
                   ii = 0;
-                  if(ch == 0 ) break;
+                  if(y == 0 ) break;
                 }
                 x++;
             }
