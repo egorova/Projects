@@ -56,6 +56,7 @@ namespace Lab2
                     }
                     position = -1;
                 }
+                
             }
             Console.Write("Индекс указанного элемента в массиве: ");
             if (position != -1)

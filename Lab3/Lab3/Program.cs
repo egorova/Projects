@@ -43,6 +43,7 @@ namespace Lab3
                 {
                     int_arr[j + 1] = int_arr[j];
                     j--;
+                
                 }
                 int_arr[j + 1] = temp;
             }
